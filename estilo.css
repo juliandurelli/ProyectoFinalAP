@@ -7,20 +7,24 @@
     src: url(font/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 .fondobannerprincipal{
-    background-image: url(Imagenes/fondo\ banner\ 1.jpg);
+    background-image: url(Imagenes/10131712.jpg);
     background-size: cover;
     background-position: center;
     height: 87vh;
 }
 .titulobannerprincipal{
     font-family: 'Nunito';
-    color: white;
-    font-size: 40px;
+    color:white;
+    font-size: 50px;
     font-weight: 900;
+}
+.bannerfondo{
+    background-color: rgba(25,135,84,0.7);
+    border-radius: 20px;
 }
 .textobanner{
     font-family: 'Open-Sans';
-    font-size: 22px;
+    font-size: 23px;
     color: white;
 }
 .preTitulo{
@@ -41,11 +45,17 @@
     color: black;
     font-size: 16px;
 }
+.grisespecialf{
+    background-color: #525252;
+}
 .grisf{
     background-color: #E8E8E8;
 }
 .rosaf{
     background-color:#E21982;
+}
+.verdef{
+    background-color: rgb(25,135,84);
 }
 .tituloAyuda{
     font-family: 'Nunito';
@@ -57,7 +67,7 @@
     background-color: #22193F;
 }
 .icono{
-    color:#E21982;
+    color:rgb(25,135,84);;
     background-color: white;
     padding: 5px;
     border-radius: 20px;
@@ -83,3 +93,9 @@
 .barra{
     border-top: 2px solid white;
  }
+.tituloAyuda{
+    font-family: 'Nunito';
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
