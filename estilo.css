@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url(font/Nunito-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Open-Sans';
+    src: url(font/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+.fondobannerprincipal{
+    background-image: url(Imagenes/fondo\ banner\ 1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 87vh;
+}
+.titulobannerprincipal{
+    font-family: 'Nunito';
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+}
+.textobanner{
+    font-family: 'Open-Sans';
+    font-size: 22px;
+    color: white;
+}
+.preTitulo{
+    font-family: 'Nunito';
+    color: orangered;
+    font-size: 12px;
+    font-weight: 100;
+
+}
+.TituloSecundario{
+    font-family: 'Open-Sans';
+    font-size: 28px;
+    color: black;
+    font-weight: 900;
+}
+.textogeneral{
+    font-family: 'Open-Sans';
+    color: black;
+    font-size: 16px;
+}
+.grisf{
+    background-color: #E8E8E8;
+}
+.rosaf{
+    background-color:#E21982;
+}
+.tituloAyuda{
+    font-family: 'Nunito';
+    font-size: 23px;
+    color: white;
+    font-weight: bold;
+}
+.azulf{
+    background-color: #22193F;
+}
+.icono{
+    color:#E21982;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: end;
+}
+.footertext{
+    font-family: 'Open-Sans';
+    color: white;
+    font-size:14px;
+}
+.textogeneral{
+    font-family: 'Open-Sans';
+    color: black;
+    font-size: 16px;
+}
+.copyright{
+    font-family: 'Open-Sans';
+    color: white;
+    font-size: 12px;
+}
+.barra{
+    border-top: 2px solid white;
+ }
