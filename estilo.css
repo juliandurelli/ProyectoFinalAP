@@ -67,13 +67,57 @@
     background-color: #22193F;
 }
 .icono{
-    color:rgb(25,135,84);;
+    color:rgb(25,135,84);
     background-color: white;
     padding: 5px;
     border-radius: 20px;
     font-size: 20px;
     font-weight: 900;
     text-align: end;
+}
+.imageneshistoria{
+    height: 300px;
+    width: 400px;
+
+}
+.boton{
+    font-family: 'Nunito';
+    font-size:17px;
+    color: white;
+    font-weight: 900;
+}
+.navbartexto:hover{
+    background-color:rgb(25,135,84);
+    color: white;
+}
+nav{
+    box-shadow: 0px 5px 30px #525252;
+}
+.logo{
+    height: 100px;
+    width: 162px;
+    padding: 10px;
+}
+.navbartexto{
+    color: black;
+    font-family: 'Open-Sans';
+    font-size: 15px;
+    padding: 40px;
+}
+.footerlink{
+    text-decoration: none;
+    font-family: 'Open-Sans';
+    color: white;
+    font-size:14px;
+    padding: 10px;
+}
+.footerlink:hover{
+    text-decoration: none;
+    font-family: 'Open-Sans';
+    color:rgb(25,135,84);
+    font-size:14px;
+    background-color: white;
+    padding: 10px;
 }
 .footertext{
     font-family: 'Open-Sans';
