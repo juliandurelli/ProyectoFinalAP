@@ -45,6 +45,12 @@
     color: black;
     font-size: 16px;
 }
+.completado{
+    display: none;
+}
+.admitido{
+    display: flex;
+}
 .grisespecialf{
     background-color: #525252;
 }
@@ -53,6 +59,9 @@
 }
 .rosaf{
     background-color:#E21982;
+}
+.rojof{
+    color: red;
 }
 .verdef{
     background-color: rgb(25,135,84);
