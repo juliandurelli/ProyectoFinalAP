@@ -36,6 +36,47 @@
            </div>
         </div>
     </nav>
+    <div class="container-fluid grisf py-3">
+        <div class="row text-start justify-content-start align-items-center my-5 mx-0">
+            <div class="col-4 offset-2">
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col">
+                        <label for="ValidationCustom01" class="form-label mt-1">Nombre</label>
+                        <input type="text" class="form-control" id="ValidationCustom01" value="" required>
+                        <div class="invalid-feedback">
+                            <label for="">ingrese un nombre</label>
+                        </div>
+                        <label for="validationapellido" class="form-label mt-1">Apellido</label>
+                        <input type="text" class="form-control" id="validationapellido" value="" required>
+                        <div class="invalid-feedback">
+                            <label for="">Ingrese un apellido</label>
+                        </div>
+                        <label for="ValidationCustom02" class="form-label mt-1">Email</label>
+                        <input type="email" class="form-control" id="ValidationCustom02" value="" required placeholder="ejemplo@gmail.com">
+                        <div class="invalid-feedback">
+                            <label for="">Ingrese un correo valido</label>
+                        </div>
+                        <label for="ValidationNumber" class="form-label mt-1">Numero de Telefono</label> 
+                        <input type="number" class="form-control" id="ValidationNumber" value="" required>
+                        <div class="invalid-feedback">
+                            <label for="">Ingrese un numero de telefono</label>
+                        </div>
+                        <label for="Validationtextarea" class="form-label mt-1">Mensaje</label>
+                        <textarea class="form-control" id="Validationtextarea" cols="30" rows="5"></textarea>
+                        <label for="formFile" class="form-label mt-1">Curriculum Vitae</label>
+                        <input type="file" class="form-control" id="formFile" required>
+                        <div class="invalid-feedback">
+                            <label for="">Ingrese su Curriculum Vitae</label>
+                        </div>
+                        <button type="button" class="btn btn-success rounded-pill boton mt-4 px-5 w-100 py-2" onclick="validacion()"> Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-5 mx-5 pt-2">
+                <img src="Imagenes/stock-photo-smiling-warehouse-worker-talking-smartphone.jpg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
     <footer class="grisespecialf">
         <div class="container text-start">
             <div class="row justify-content-start pt-5 pb-3 mx-0 px-0">

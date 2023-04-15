@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Nunito';
-    src: url(font/Nunito-VariableFont_wght.ttf);
+    src: url(fonts/Nunito-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: 'Open-Sans';
-    src: url(font/OpenSans-VariableFont_wdth\,wght.ttf);
+    src: url(fonts/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 .fondobannerprincipal{
     background-image: url(Imagenes/10131712.jpg);
@@ -89,6 +89,10 @@
 .navbartexto:hover{
     background-color:rgb(25,135,84);
     color: white;
+}
+.imagencv{
+    width: 400px;
+    height: 400px;
 }
 nav{
     box-shadow: 0px 5px 30px #525252;
