@@ -627,7 +627,7 @@ function validacion(){
   })
 }
 function recuperarCarrito(){
-  let carrito = localStorage.getItem("carrito1");
+  let carrito = localStorage.getItem("carrito");
   if(carrito){
      // El carrito está guardado como texto, hay que convertirlo a un array de objetos
     return JSON.parse(carrito);
