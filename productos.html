@@ -1,9 +1,16 @@
+<!-- Integrantes del grupo 10
+MICHEL MERLO
+RODRIGO EDUARDO
+IVAN EZEQUIEL BORDONI
+JULIÁN EZEQUIEL DURELLI -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wooden - Productos</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
@@ -37,72 +44,74 @@
            </div>
         </div>
     </nav>
-    <div class="container-fluid grisf">
-        <div class="row ">
-            <div class="col">
-                <div class="container">
-                    <div class="row justify-content-center text-center">
-                        <div class="col-12 py-5">
-                            <h2>Seleccione los Productos</h2>
-                        </div>
-                        <div class="col-12">
-                            <div class="row justify-content-start text-start pb-5">
-                                <div class="col-4">
-                                    <label for="validacionmadera" class="form-label">Tipo de Madera</label>
-                                    <select  class="form-select" aria-label="Default select example" id="validacionmadera" onchange="precio()">
-                                        <option value="1">Pino</option>
-                                        <option value="2">Roble</option>
-                                        <option value="3">Kiri</option>
-                                        <option value="4">Cerezo</option>
-                                        <option value="5">Nogal</option>
-                                        <option value="6">Abeto</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <label for="validacionforma" class="form-label">Forma</label>
-                                    <select  class="form-select" aria-label="Default select example" id="validacionforma" onchange="compra(), precio()">
-                                        <option value="1" selected>Plancha</option>
-                                        <option value="2">Tirante</option>
-                                        <option value="3">Poste</option>
-                                    </select>
-                                </div>
-                                <div class="col-4">
-                                    <label for="validacionmedidas" class="form-label" id="labelvalidacionmedidas">Medidas</label>
-                                    <select  class="form-select" aria-label="Default select example" id="validacionmedidas" onchange="precio()">
-                                    </select>
-                                </div>
+   <section id="primeraparte">
+        <div class="container-fluid grisf">
+            <div class="row ">
+                <div class="col">
+                    <div class="container">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-12 py-5">
+                                <h2>Seleccione los Productos</h2>
                             </div>
-                            <div class="row justify-content-start text-start pb-5">
-                                <div class="col-4">
-                                    <label for="validacionacabado" class="form-label">Acabado</label>
-                                    <select  class="form-select" aria-label="Default select example" id="validacionacabado" onchange="precio()">
-                                        <option value="1">Cepillado</option>
-                                        <option value="2">Cepillado y Pintado</option>
-                                        <option value="3">Natural</option>
-                                        <option value="4">Natural y Pintado</option>
-                                    </select>
+                            <div class="col-12">
+                                <div class="row justify-content-start text-start pb-5">
+                                    <div class="col-4">
+                                        <label for="validacionmadera" class="form-label">Tipo de Madera</label>
+                                        <select  class="form-select" aria-label="Default select example" id="validacionmadera" onchange="precio()">
+                                            <option value="1">Pino</option>
+                                            <option value="2">Roble</option>
+                                            <option value="3">Kiri</option>
+                                            <option value="4">Cerezo</option>
+                                            <option value="5">Nogal</option>
+                                            <option value="6">Abeto</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="validacionforma" class="form-label">Forma</label>
+                                        <select  class="form-select" aria-label="Default select example" id="validacionforma" onchange="compra(), precio()">
+                                            <option value="1" selected>Plancha</option>
+                                            <option value="2">Tirante</option>
+                                            <option value="3">Poste</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="validacionmedidas" class="form-label" id="labelvalidacionmedidas">Medidas</label>
+                                        <select  class="form-select" aria-label="Default select example" id="validacionmedidas" onchange="precio()">
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="col-4">
-                                    <label for="validacionlargo" class="form-label" id="validacionlargog">Largo</label>
-                                    <select  class="form-select" aria-label="Default select example" id="validacionlargo" onchange="precio()">
-                                    </select>
+                                <div class="row justify-content-start text-start pb-5">
+                                    <div class="col-4">
+                                        <label for="validacionacabado" class="form-label">Acabado</label>
+                                        <select  class="form-select" aria-label="Default select example" id="validacionacabado" onchange="precio()">
+                                            <option value="1">Cepillado</option>
+                                            <option value="2">Cepillado y Pintado</option>
+                                            <option value="3">Natural</option>
+                                            <option value="4">Natural y Pintado</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="validacionlargo" class="form-label" id="validacionlargog">Largo</label>
+                                        <select  class="form-select" aria-label="Default select example" id="validacionlargo" onchange="precio()">
+                                        </select>
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="validacionnumerom" class="form-label">Cantidad</label>
+                                        <input type="number" class="form-control" id="validacionnumerom" value="1" min="1" onchange="precio()">
+                                    </div>
                                 </div>
-                                <div class="col-4">
-                                    <label for="validacionnumerom" class="form-label">Cantidad</label>
-                                    <input type="number" class="form-control" id="validacionnumerom" value="1" min="1" onchange="precio()">
-                                </div>
-                            </div>
-                            <div class="row justify-content-center text-center pb-5">
-                                <div class="col-4">
-                                    <label for="validacionpreciou" class="form-label">Precio por Unidad</label>
-                                    <h3 id="preciopu">$0.00</h3>
-                                </div>
-                                <div class="col-4">
-                                    <label for="validacionpreciot" class="form-label">Precio Total</label>
-                                    <h3 id="preciot">$0.00</h3>
-                                </div>
-                                <div class="col-4 py-3">
-                                    <button type="button" class="btn btn-success rounded-pill boton px-4" onclick="agre()">Agregar al Carito</button>
+                                <div class="row justify-content-center text-center pb-5">
+                                    <div class="col-4">
+                                        <label for="validacionpreciou" class="form-label">Precio por Unidad</label>
+                                        <h3 id="preciopu">$0.00</h3>
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="validacionpreciot" class="form-label">Precio Total</label>
+                                        <h3 id="preciot">$0.00</h3>
+                                    </div>
+                                    <div class="col-4 py-3">
+                                        <button type="button" class="btn btn-success rounded-pill boton px-4" onclick="agre()">Agregar al Carito</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -110,22 +119,262 @@
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="container-fluid grisf">
+        <div class="container-fluid grisf">
+            <div class="row justify-content-center text-center">
+                <div class="col-12">
+                    <div class="container">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-12">
+                                <h2>Carrito</h2>
+                                <div class="row justify-content-start text-start mt-3 mb-5" id="lista"></div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between text-center mb-5 mx-0 px-0">
+                            <div class="col-3">
+                                <button type="button" class="btn btn-danger boton w-100" onclick="borrar()">borrar carrito</button>
+                            </div>
+                            <div class="col-3">
+                                <button type="button" class="btn btn-success rounded-pill boton w-100" onclick="comprarprimera()">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   <section class="nomostrar" id="segundaparte"> 
+    <div class="container-fluid py-5 grisf" >
         <div class="row justify-content-center text-center">
             <div class="col-12">
                 <div class="container">
                     <div class="row justify-content-center text-center">
                         <div class="col-12">
-                            <h2>Carrito</h2>
-                            <div class="row justify-content-start text-start" id="lista"></div>
+                            <h2 class="nombrecompra">Proceso de Compra<h2>
+                            <h3 class="segundocompra">Necesitamos los datos para completar la Compra</h3>
+                        </div>
+                        <div class="col-12">
+                            <div class="container">
+                                <form class="g-3 needs-validation1" id="formulario" novalidate>
+                                    <div class="row justify-content-center text-start">
+                                        <div class="col-4">
+                                            <label for="validationnombrec" class="form-label mt-1">Nombre</label>
+                                            <input type="text" class="form-control" id="validationnombrec" value="" required>
+                                            <div class="invalid-feedback">
+                                                <label for="">Ingrese un Nombre</label>
+                                            </div>
+                                            <label for="validationapellidoc" class="form-label mt-1">Apellido</label>
+                                            <input type="text" class="form-control" id="validationapellidoc" value="" required>
+                                            <div class="invalid-feedback">
+                                                <label for="">Ingrese un Apellido</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <label for="validationemailc" class="form-label mt-1">Email</label>
+                                            <input type="email" class="form-control" id="validationemailc" value="" required>
+                                            <div class="invalid-feedback">
+                                                <label for="">Ingrese Email</label>
+                                            </div>
+                                            <label for="validationtelefonoc" class="form-label mt-1">Numero de Telefono</label> 
+                                            <input type="number" class="form-control" id="validationtelefonoc" value="" required>
+                                            <div class="invalid-feedback">
+                                                <label for="">Ingrese un Numero de Telefono</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-center text-center my-5">
+                                        <div class="col-3">
+                                           <button type="button" class="btn btn-success rounded-pill boton w-100" onclick="volverprimera()">Volver</button>
+                                        </div>
+                                        <div class="col-3 offset-2">
+                                            <button type="button" class="btn btn-success rounded-pill boton w-100" onclick="validacionprimera()">Siguiente</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </section>
+    <section class="nomostrar" id="terceraparte"> 
+        <div class="container-fluid py-5 grisf" >
+            <div class="row justify-content-center text-center">
+                <div class="col-12">
+                    <div class="container">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-12">
+                                <h2 class="nombrecompra">Proceso de Compra<h2>
+                                <h3 class="segundocompra">Necesitamos los datos para completar la Compra</h3>
+                            </div>
+                            <div class="col-12">
+                                <div class="container">
+                                    <form class="g-3 needs-validation2" id="formulario" novalidate></form>
+                                        <div class="row justify-content-center text-start">
+                                            <div class="col-4">
+                                                <label for="ValidationCustom01" class="form-label mt-1">Destino</label>
+                                                <br>
+                                                <select name="" id="dire" class="w-100" onchange="direccion()">
+                                                    <option value="1">Envio a Domicilio</option>
+                                                    <option value="2">Retirar en la Empresa</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <form class="g-3 needs-validation3" id="formulario" novalidate>
+                                            <div class="row justify-content-center text-start">
+                                                <div class="col-4">
+                                                    <label for="validationpaisc" class="form-label mt-1">Pais</label>
+                                                    <input type="text" class="form-control validationl" id="validationpaisc" value="" required>
+                                                    <div class="invalid-feedback">
+                                                        <label for="">Ingrese Pais</label>
+                                                    </div>
+                                                    <label for="validationprovinciac" class="form-label mt-1">Provincia</label> 
+                                                    <input type="text" class="form-control validationl" id="validationprovinciac" value="" required>
+                                                    <div class="invalid-feedback">
+                                                        <label for="">Ingrese Provincia</label>
+                                                    </div>
+                                                    <label for="validationciudadc" class="form-label mt-1">Ciudad</label>
+                                                    <input type="text" class="form-control validationl" id="validationciudadc" value="" required>
+                                                    <div class="invalid-feedback">
+                                                        <label for="">Ingrese Ciudad</label>
+                                                    </div>
+                                                    <label for="validationdireccionc" class="form-label mt-1">Direccion</label> 
+                                                    <input type="text" class="form-control validationl" id="validationdireccionc" value="" required>
+                                                    <div class="invalid-feedback">
+                                                        <label for="">Ingrese un Direccion</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="row justify-content-center text-center my-5">
+                                            <div class="col-3">
+                                               <button type="button" class="btn btn-success rounded-pill boton w-100" onclick="volversegunda()">Volver</button>
+                                            </div>
+                                            <div class="col-3 offset-2">
+                                                <button type="button" class="btn btn-success rounded-pill boton w-100" onclick="validacionsegunda()">Siguiente</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="nomostrar" id="cuartaparte"> 
+            <div class="container-fluid py-5 grisf" >
+                <div class="row justify-content-center text-center">
+                    <div class="col-12">
+                        <div class="container">
+                            <div class="row justify-content-center text-center">
+                                <div class="col-12">
+                                    <h2 class="nombrecompra">Proceso de Compra<h2>
+                                    <h3 class="segundocompra">Necesitamos los datos para completar la Compra</h3>
+                                </div>
+                                <div class="col-12">
+                                    <div class="container">
+                                        <form class="g-3 needs-validation4" id="formulario" novalidate></form>
+                                            <div class="row justify-content-center text-start">
+                                                <div class="col-4">
+                                                    <label for="ValidationCustom01" class="form-label mt-1">Destino</label>
+                                                    <br>
+                                                    <select name="" id="tarjetat" class="w-100" onchange="tarjeta()">
+                                                        <option value="1">Debito</option>
+                                                        <option value="2">credito</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">
+                                                        <label for="">Ingrese un Nombre</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <form class="g-3 needs-validation44" id="formulario" novalidate>
+                                                <div class="row justify-content-center text-start">
+                                                    <div class="col-4">
+                                                        <label for="ValidationCustom02" class="form-label mt-1">Numero de tarjeta</label>
+                                                        <input type="number" class="form-control validationlt" id="validationl" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            <label for="">Ingrese Numero de Tarjeta</label>
+                                                        </div>
+                                                        <label for="ValidationNumber" class="form-label mt-1">Nombre del usuario de la Targeta</label> 
+                                                        <input type="text" class="form-control validationlt" id="validationl" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            <label for="">Ingrese Nombre</label>
+                                                        </div>
+                                                        <label for="ValidationCustom02" class="form-label mt-1">Fecha de vencimiento</label>
+                                                        <input type="text" class="form-control validationlt" id="validationl" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            <label for="">Ingrese Fecha de Vencimiento</label>
+                                                        </div>
+                                                        <label for="ValidationNumber" class="form-label mt-1">Numero de Seguridad</label> 
+                                                        <input type="text" class="form-control validationlt" id="validationl" value="" required>
+                                                        <div class="invalid-feedback">
+                                                            <label for="">Ingrese Numero</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="row justify-content-center text-start">
+                                                <div class="col-4 nomostrar" id="validacionltt">
+                                                    <label for="">Seleccione Numero de Cuotas</label>
+                                                    <select name="" id="cuotas">
+                                                        <option value="">1 Cuota</option>
+                                                        <option value="">3 Cuotas</option>
+                                                        <option value="">6 Cuotas</option>
+                                                        <option value="">12 Cuotas</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row justify-content-center text-center my-5">
+                                                <div class="col-3">
+                                                   <button type="button" class="btn btn-success rounded-pill boton w-100" onclick="volvertercera()">Volver</button>
+                                                </div>
+                                                <div class="col-3 offset-2">
+                                                    <button type="button" class="btn btn-success rounded-pill boton w-100" onclick="validaciontercera(), personales(), mostrarresumen()">Siguiente</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+    <section class="nomostrar" id="finalizar">
+        <div class="container-fluid grisf py-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-12"  id="contenido">
+                    <div class="container">
+                        <div class="row justify-content-start text-start">
+                            <div class="col-12 p-5">
+                                <h2>Resumen de Compra</h2>
+                                <br>
+                                <h5>Datos Cliente</h5>
+                                <br>
+                                <label for="" id="datospersonal"></label>
+                                <br><br>
+                                <label for="" id="datospersonal2"></label>
+                                <br><br>
+                                <h3>Productos</h3>
+                                <div id="lista2"></div>
+                                <div id="total"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <button type="button" class="btn btn-success rounded-pill boton w-100" onclick="volvercuarta()">Volver</button>
+                </div>
+                <div class="col-3 offset-2">
+                    <button type="button" class="btn btn-success rounded-pill boton w-100" onclick="pdf()">generar pdf</button>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="grisespecialf">
         <div class="container text-start">
             <div class="row justify-content-start pt-5 pb-3 mx-0 px-0">
